@@ -21,5 +21,18 @@ namespace UserRegistrationExceptionUnitTest
                 Assert.AreEqual("Invalid FirstName",e.Message);
             }
         }
+        [Test]
+        public void GivenLastName_ShouldThrow_UserRegistrationCustomException()
+        {
+            try
+            {
+                bool expected = true;
+                Assert.AreEqual(expected, patternsMatch.ValidateLastName(null));
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Invalid LastName", e.Message);
+            }
+        }
     }
 }
