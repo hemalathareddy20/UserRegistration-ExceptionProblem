@@ -16,9 +16,9 @@ namespace UserRegistrationExceptionUnitTest
                 bool expected = true;
                 Assert.AreEqual(expected, patternsMatch.ValidateFirstName(null));
             }
-            catch(UserRegistrationCustomException e)
+            catch (UserRegistrationCustomException e)
             {
-                Assert.AreEqual("Invalid FirstName",e.Message);
+                Assert.AreEqual("Invalid FirstName", e.Message);
             }
         }
         [Test]
@@ -32,6 +32,19 @@ namespace UserRegistrationExceptionUnitTest
             catch (UserRegistrationCustomException e)
             {
                 Assert.AreEqual("Invalid LastName", e.Message);
+            }
+        }
+        [Test]
+        public void GivenNullEmailID_ShouldThrow_UserRegistrationCustomException()
+        {
+            try
+            {
+                bool expected = true;
+                Assert.AreEqual(expected, patternsMatch.ValidateEmailId(null));
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Invalid Email ID", e.Message);
             }
         }
     }
