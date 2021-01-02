@@ -13,7 +13,7 @@ namespace UserRegistrationException
             Console.WriteLine("FirstName:" + patternsMatch.ValidateFirstName(firstName));
             Console.WriteLine("Enter LastName:");
             string lastName = Console.ReadLine();
-            Console.WriteLine("LastName:" + patternsMatch.ValidateFirstName(lastName));
+            Console.WriteLine("LastName:" + patternsMatch.ValidateLastName(lastName));
         }
     }
 }
